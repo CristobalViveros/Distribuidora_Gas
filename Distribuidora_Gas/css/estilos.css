@@ -1,0 +1,37 @@
+/*ESTILO PARA FORMULARIOS DEL LOGIN Y REGISTRO*/
+.formulario-contenedor {
+    max-width: 400px;
+    margin: 3rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formulario-contenedor h2 {
+    text-aling: center;
+    color: rgba(230, 122, 0, 0.986)
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem
+}          
+
+.grupo-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.grup-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Evita que el padding rompa el ancho */
+}
+
+/*----------------------*/
+
+
+
