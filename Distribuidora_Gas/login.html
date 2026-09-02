@@ -6,12 +6,19 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>Distribuidora de Gas El Volcán</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Pedir Gas</a>
-            <a href="login.html">Iniciar Sesión</a>
+    <header id="encabezado">
+        <div class="logo-contenedor">
+            <img src="img/Logo El Volcan.jpg" alt="Logo Distribuidora de Gas El Volcán" class="logo">
+            <h1>Distribuidora de Gas El Volcán</h1>
+        </div>
+        <p>Gas licuado a domicilio en Chillán y alrededores</p>
+
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>                
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -45,7 +52,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Distribuidora de Gas El Volcán. Todos los derechos reservados.</p>
+        <p><small>&copy; <span id="anio-actual">2026</span> Distribuidora de Gas El Volcán - Todos los derechos reservados</small></p>
     </footer>
 
     <!-- Vinculación del archivo JavaScript antes de cerrar el body -->
