@@ -33,6 +33,63 @@
 
 /*----------------------*/
 
+/* ==== Botón de formularios ==== */
+.btn{
+    display: block;
+    width: 100%;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover{
+    background-color: var(--naranja-claro);
+    transform: translateY(-2px);
+}
+
+/* ==== Mensajes de validación ==== */
+.mensaje-error{
+    display: block;
+    color: rgb(200, 40, 40);
+    font-size: 0.85rem;
+    margin-top: 4px;
+    min-height: 18px; /* reserva espacio para que el form no "salte" cuando aparece */
+}
+
+.mensaje-exito{
+    text-align: center;
+    color: rgb(40, 140, 60);
+    font-weight: bold;
+}
+
+/* ==== Inputs con error (clase que puede agregar el JS) ==== */
+.grupo-form input.input-error{
+    border-color: rgb(200, 40, 40);
+    background-color: rgb(255, 240, 240);
+}
+
+/* ==== Enlaces bajo el formulario ==== */
+.enlaces-form{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.enlaces-form a{
+    color: var(--azul-principal);
+    text-decoration: none;
+}
+
+.enlaces-form a:hover{
+    text-decoration: underline;
+}
+
 /* ==== Variables de color (paleta azul + naranja) ==== */
 :root{
     --azul-principal: rgb(20, 70, 130);
