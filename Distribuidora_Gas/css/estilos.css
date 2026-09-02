@@ -9,7 +9,7 @@
 }
 
 .formulario-contenedor h2 {
-    text-aling: center;
+    text-align: center;
     color: rgba(230, 122, 0, 0.986)
 }
 
@@ -23,7 +23,7 @@
     font-weight: bold;
 }
 
-.grup-form input {
+.grupo-form input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -32,6 +32,157 @@
 }
 
 /*----------------------*/
+
+/* ==== Variables de color (paleta azul + naranja) ==== */
+:root{
+    --azul-principal: rgb(20, 70, 130);
+    --azul-oscuro: rgb(10, 40, 80);
+    --naranja: rgb(240, 120, 30);
+    --naranja-claro: rgb(255, 160, 80);
+    --gris-claro: rgb(245, 245, 245);
+    --blanco: rgb(255, 255, 255);
+}
+
+/* ==== Base ==== */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Verdana, Tahoma, sans-serif;
+    background-color: var(--gris-claro);
+    color: rgb(40, 40, 40);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* ==== Header ==== */
+#encabezado{
+    background-color: var(--azul-principal);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#encabezado .logo{
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.4));
+}
+
+#encabezado h1{
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* ==== Navegación ==== */
+#menu-principal ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#menu-principal ul li a{
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--naranja);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#menu-principal ul li a:hover{
+    background-color: var(--naranja-claro);
+    transform: scale(1.05);
+}
+
+/* ==== Contenido principal ==== */
+#contenido{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.seccion{
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.seccion h2{
+    color: var(--azul-principal);
+    border-bottom: 2px solid var(--naranja);
+    padding-bottom: 8px;
+}
+
+/* ==== Imagen de presentación ==== */
+.imagen-presentacion{
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* ==== Botón CTA (Call To Action) ==== */
+.boton-cta{
+    display: inline-block;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-cta:hover{
+    background-color: var(--naranja-claro);
+    transform: translateY(-3px);
+}
+
+/* ==== Video ==== */
+.video-contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+}
+
+.video-contenedor iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ==== Footer ==== */
+#pie{
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 15px;
+}
 
 
 
