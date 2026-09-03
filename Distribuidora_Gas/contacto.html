@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Distribuidora de Gas El Volcán</title>
+    <!--enlace de la hoja de estilos-->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo-container">
+            <h1>Gas El Volcán</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo de Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="info-contacto">
+            <h2>Comunícate con Nosotros</h2>
+            <p>En <strong>Distribuidora de Gas El Volcán</strong> estamos listos para llevar tu cilindro de gas directamente a tu domicilio[cite: 1].</p>
+            <ul>
+                <li><strong>Ubicación:</strong> Chillán, Región de Ñuble[cite: 1].</li>
+                <li><strong>Zonas de reparto:</strong> Clientes residenciales y comerciales en Chillán y comunas aledañas[cite: 1].</li>
+                <li><strong>Horario de atención:</strong> Lunes a Sábado de 08:00 a 18:00 hrs.</li>
+            </ul>
+        </section>
+
+        <section class="formulario-contacto">
+            <h2>Envíanos un mensaje</h2>
+            <!-- El formulario será validado mediante JavaScript -->
+            <form id="formContacto" action="#" method="POST">
+                <div class="campo">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+                    <span class="error-msg" id="errorNombre"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono de Contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 912345678">
+                    <span class="error-msg" id="errorTelefono"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                    <span class="error-msg" id="errorCorreo"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Consulta o Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <span class="error-msg" id="errorMensaje"></span>
+                </div>
+
+                <button type="submit" id="btnEnviar">Enviar Mensaje</button>
+                <p id="mensajeExito" style="display:none; color: green; font-weight: bold;">¡Tu mensaje ha sido enviado con éxito!</p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
