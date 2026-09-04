@@ -243,98 +243,206 @@ body{
 
 
 /*CONTACTO HTML*/
+/* ==========================================================================
+   ESTILOS GENERALES - DISTRIBUIDORA DE GAS EL VOLCÁN
+   ========================================================================== */
 
-/* Estilos generales para mantener coherencia */
-body {
-    font-family: Arial, sans-serif;
+/* Variables de color corporativo */
+:root {
+    --azul-header: rgb(20, 70, 130);      /* Azul principal del encabezado y footer */
+    --azul-nav: #0e1424;         /* Azul muy oscuro/negro de la barra de navegación */
+    --naranja: #f27a24;          /* Naranja corporativo de botones y títulos */
+    --naranja-hover: #d96614;    /* Naranja más oscuro al pasar el cursor */
+    --fondo-pagina: #f4f6f9;     /* Fondo gris claro de la página */
+    --texto-oscuro: #1f2937;     /* Color de texto principal */
+    --borde-input: #d1d5db;      /* Borde gris claro de los campos */
+    --fondo-input: #f9fafb;      /* Fondo de los campos */
+}
+
+/* Reseteo universal */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo-pagina);
+    color: var(--texto-oscuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- ENCABEZADO (HEADER) --- */
 header {
-    background-color: var(--azul-oscuro); /* Color rojo para representar el 'Volcán' y el Gas */
+    background-color: var(--azul-header);
     color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem 1rem 1rem;
 }
 
-nav ul {
-    list-style: none;
+.header-content h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.header-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* --- BARRA DE NAVEGACIÓN AISLADA (NAV) --- */
+nav {
+    background-color: var(--azul-nav);
+    margin: 1.5rem 2rem 0.5rem 2rem; /* Crea el marco azul alrededor del recuadro oscuro */
+    padding: 1.2rem 1rem;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 nav a {
+    background-color: var(--naranja);
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 22px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-block;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover,
+nav a.active {
+    background-color: var(--naranja-hover);
+    text-decoration: none;
 }
 
+/* --- ESTRUCTURA DE CENTRADO Y TARJETAS FLOTANTES --- */
 main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
 }
 
-/* Estilos específicos del formulario */
-.formulario-contacto form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Tarjeta flotante centrada (Aplica a Login y Contacto) */
+.form-card,
+.formulario-contacto {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
 }
 
+.form-card h2,
+.formulario-contacto h2 {
+    color: var(--naranja);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* --- CAMPOS Y FORMULARIOS --- */
 .campo {
-    margin-bottom: 15px;
+    margin-bottom: 1.2rem;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .campo label {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 0.4rem;
 }
 
-.campo input, .campo textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
+.campo input, 
+.campo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--borde-input);
+    background-color: var(--fondo-input);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
 }
 
-button {
-    background-color: #e63946;
+.campo input:focus, 
+.campo textarea:focus {
+    background-color: #ffffff;
+    border-color: var(--naranja);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- BOTÓN PRINCIPAL --- */
+button,
+button[type="submit"],
+.btn-naranja {
+    width: 100%;
+    background-color: var(--naranja);
     color: white;
-    padding: 10px 15px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 12px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease;
 }
 
-button:hover {
-    background-color: #c1121f;
+button:hover,
+button[type="submit"]:hover,
+.btn-naranja:hover {
+    background-color: var(--naranja-hover);
 }
 
+/* --- MENSAJES Y ENLACES --- */
 .error-msg {
-    color: red;
+    color: #dc2626;
     font-size: 0.85rem;
-    margin-top: 5px;
+    margin-top: 0.3rem;
 }
 
-footer {
+.enlace-secundario {
     text-align: center;
-    background-color: #1d3557;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.enlace-secundario a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.enlace-secundario a:hover {
+    text-decoration: underline;
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+footer {
+    background-color: var(--azul-header);
     color: white;
-    padding: 1rem;
-    margin-top: 2rem;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
 }
