@@ -8,62 +8,62 @@
 </head>
 <body>
 
-    <!-- Encabezado idéntico al de login -->
-  <header>
-    <div class="header-content">
-        <h1>Distribuidora de Gas El Volcán</h1>
+    <header id="encabezado">
+        <div class="logo-contenedor">
+            <img src="img/Logo El Volcan.jpg" alt="Logo Distribuidora de Gas El Volcán" class="logo">
+            <h1>Distribuidora de Gas El Volcán</h1>
+        </div>
         <p>Gas licuado a domicilio en Chillán y alrededores</p>
-    </div>
 
-    <!-- EL NAV DEBE IR DENTRO DEL HEADER -->
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Catálogo</a>
-        <a href="login.html">Iniciar Sesión</a>
-        <a href="registro.html">Registrarse</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-</header>
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
 
     <!-- Contenido central con tarjeta blanca -->
-   <main>
-    <!-- Tarjeta blanca centrada idéntica a la de Login -->
-    <div class="form-card">
-        <h2>Contacto</h2>
-        
-        <form id="formulario-contacto">
-            <div class="campo">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                <span class="error-msg" id="errorNombre"></span>
-            </div>
+   <main id="contenido">
+        <section class="formulario-contenedor">
+            <h2>Contacto</h2>
 
-            <div class="campo">
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
-                <span class="error-msg" id="errorCorreo"></span>
-            </div>
+            <form id="formulario-contacto">
+                <div class="grupo-form">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                    <span class="mensaje-error" id="errorNombre"></span>
+                </div>
 
-            <div class="campo">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
-                <span class="error-msg" id="errorMensaje"></span>
-            </div>
+                <div class="grupo-form">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                    <span class="mensaje-error" id="errorCorreo"></span>
+                </div>
 
-            <button type="submit">Enviar Mensaje</button>
-        </form>
+                <div class="grupo-form">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <span class="mensaje-error" id="errorMensaje"></span>
+                </div>
 
-        <div class="enlace-secundario">
-            <a href="index.html">Volver a la página principal</a>
-        </div>
-    </div>
-</main>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+                <p id="mensajeExitoContacto" class="mensaje-exito"></p>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2026 Distribuidora de Gas El Volcán - Todos los derechos reservados</p>
+                <div class="enlaces-form">
+                    <a href="index.html">Volver a la página principal</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="pie">
+        <p><small>&copy; <span id="anio-actual">2026</span> Distribuidora de Gas El Volcán - Todos los derechos reservados</small></p>
     </footer>
 
     <script src="js/script.js"></script>

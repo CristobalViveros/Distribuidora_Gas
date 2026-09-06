@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas El Volcán | Detalle del producto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header id="encabezado">
+        <div class="logo-contenedor">
+            <img src="img/Logo El Volcan.jpg" alt="Logo Distribuidora de Gas El Volcán" class="logo">
+            <h1>Distribuidora de Gas El Volcán</h1>
+        </div>
+        <p>Gas licuado a domicilio en Chillán y alrededores</p>
+
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="seccion">
+            <a href="productos.html" class="volver-catalogo">&larr; Volver al catálogo</a>
+
+            <div class="producto-detalle">
+                <img src="img/cilindro15kg.jpg" alt="Cilindro de gas 15 kg" class="producto-detalle-img">
+
+                <div class="producto-detalle-info">
+                    <h2>Cilindro de Gas 15 kg</h2>
+                    <p class="producto-precio-detalle" id="precioUnitario" data-precio="19990">$19.990 c/u</p>
+
+                    <p>
+                        Cilindro de 15 kg recomendado para uso comercial o casas
+                        grandes con alto consumo. Válvula certificada y sello de
+                        seguridad. Incluye revisión gratuita del regulador al momento
+                        de la entrega.
+                    </p>
+
+                    <ul class="producto-detalle-lista">
+                        <li>Entrega el mismo día en Chillán y alrededores</li>
+                        <li>Pago contra entrega (efectivo)</li>
+                        <li>Cambio de cilindro vacío por lleno</li>
+                    </ul>
+
+                    <div class="selector-cantidad">
+                        <label for="cantidad">Cantidad:</label>
+                        <button type="button" id="btnMenos" class="btn-cantidad">−</button>
+                        <input type="number" id="cantidad" value="1" min="1" max="10">
+                        <button type="button" id="btnMas" class="btn-cantidad">+</button>
+                    </div>
+
+                    <p class="producto-total">Total: <span id="totalPedido">$19.990</span></p>
+
+                    <button type="button" id="btnPedir" class="boton-cta">Pedir ahora</button>
+                    <p id="mensajePedido" class="mensaje-exito"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="pie">
+        <p><small>&copy; <span id="anio-actual">2026</span> Distribuidora de Gas El Volcán - Todos los derechos reservados</small></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
